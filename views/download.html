@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+  </head>
+  <body class="bg-black flex flex-col items-center justify-center h-screen w-screen mx-auto">
+      <button
+        class="bg-gray-300 justify-center w-2/3 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+      >
+        <svg
+          class="fill-current w-4 h-4 mr-2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+        </svg>
+        <span>Download</span>
+      </button>
+      <script>
+        // ao clicar em download, o arquivo é baixado
+
+        // ao clicar em download, o arquivo é baixado
+
+        const download = document.querySelector('button');
+        download.addEventListener('click', () => {
+            const a = document.createElement('a');
+            a.href = 'http://localhost:3000/arquivo.csv';
+            a.download = 'contacts.txt';
+            a.click();
+        });
+    </script>
+  </body>
+</html>
